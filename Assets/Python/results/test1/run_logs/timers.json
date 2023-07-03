@@ -1,0 +1,54 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1688282635",
+        "python_version": "3.9.16 (main, May 17 2023, 17:49:16) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\cemka\\anaconda3\\envs\\ML_Agents\\Scripts\\mlagents-learn --run-id=test1 --resume",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.0.1",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1688282647"
+    },
+    "total": 11.7745658,
+    "count": 1,
+    "self": 0.004908999999997832,
+    "children": {
+        "run_training.setup": {
+            "total": 0.019625699999999968,
+            "count": 1,
+            "self": 0.019625699999999968
+        },
+        "TrainerController.start_learning": {
+            "total": 11.750031100000001,
+            "count": 1,
+            "self": 0.00011459999999985371,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 11.675183500000001,
+                    "count": 1,
+                    "self": 11.675183500000001
+                },
+                "trainer_threads": {
+                    "total": 1.299999999204715e-06,
+                    "count": 1,
+                    "self": 1.299999999204715e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.07473170000000096,
+                    "count": 1,
+                    "self": 0.00656500000000193,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.06816669999999903,
+                            "count": 1,
+                            "self": 0.06816669999999903
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
