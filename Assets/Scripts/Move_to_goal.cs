@@ -22,10 +22,10 @@ public class Move_to_goal : Agent
 
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.localPosition.x );
-        sensor.AddObservation(transform.localPosition.z );
-        sensor.AddObservation(goal.localPosition.x);
-        sensor.AddObservation(goal.localPosition.z);
+        // sensor.AddObservation(transform.localPosition.x );
+        // sensor.AddObservation(transform.localPosition.z );
+        // sensor.AddObservation(goal.localPosition.x);
+        // sensor.AddObservation(goal.localPosition.z);
 
 
 
@@ -53,14 +53,17 @@ public class Move_to_goal : Agent
         //Debug.Log("act 1 : " + actions.DiscreteActions[0] + "act 2 :" + actions.DiscreteActions[1]);
     }
 
-
+    private void FixedUpdate()
+    {
+        AddReward(-0.02f);
+    }
     private void OnCollisionEnter(Collision collision)
     {
 
         if(collision.gameObject.name == "Goal")
         {
             Underground.material.color = Color.blue;
-            AddReward(10);
+            AddReward(50);
             EndEpisode();
         }
         else if (collision.gameObject.name == "Underground")
